@@ -128,15 +128,19 @@ function expressionCalculator(expr) {
     let bktOpen = 0
     let bktClose = 0
     let exprSplit = expr.split("")
-        for (i = 0; i < exprSplit.length; i++) {
+        for (i = 0; i < exprSplit.length; i++) 
+        {
             if (exprSplit[i] == "(") {
             bktClose += 1 }
             else if (exprSplit[i] == ")") {
                 bktOpen += 1 } 
-        if (exprSplit[i] == '/' && exprSplit[i + 2] == '0') throw "TypeError: Division by zero."
+        if (exprSplit[i] == '/' && 
+        exprSplit[i + 2] == '0') 
+        throw "TypeError: Division by zero."
     }
-        if (bktClose !== bktOpen) throw "ExpressionError: Brackets must be paired."
-            return new Function(`return ${expr}`)();
+        if (bktClose !== bktOpen) 
+        throw "ExpressionError: Brackets must be paired."
+    return new Function(`return ${expr}`)();
 }
 
 module.exports = {
