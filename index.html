@@ -139,7 +139,7 @@ function expressionCalculator(expr) {
         throw "TypeError: Division by zero."
     }
         if (bktClose !== bktOpen) 
-        throw "ExpressionError: Brackets must be paired."
+        throw "ExpressionError: Be paired."
     return new Function(`return ${expr}`)();
 }
 
