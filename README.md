@@ -1,2 +1,1 @@
-# CV
-My Curriculum vitae.
+## CV - https://wetresfall.github.io/CV
